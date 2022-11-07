@@ -84,16 +84,19 @@ function selecionar(){
 //muda a cor para lilais
 function purple(){
     cor = '#AC52CC'
+    cor2 = "#ffffff" 
 }
 
 //muda a cor para vermelho
 function red(){
     cor = 'red'
+    cor2 = "#ffffff"
 }
 
 //muda a cor para preto
 function black(){
     cor = 'black'
+    cor2 = "#ffffff"
 }
 
 //Pega o valor do input cor e manda para o pincel

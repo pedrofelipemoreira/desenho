@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="desenho.css">
+        <title>Desenho</title>
+        
+    </head>
+    <body>
+       
+        <canvas id="myCanvas" width="600" height="400" style="border:2px solid #d3d3d3;">
+            Your browser does not support the HTML canvas tag.</canvas>
+
+        
+        <div class="myDIV" id="myDIV">
+            <button class="btn black active" onclick="black()"></button>
+            <button class="btn purple" onclick="purple()"></button>
+            <button class="btn red" onclick="red()"></button>
+
+            <input type="color" id="Cores" class="Cores active" value="#f1E03D">
+
+            
+        </div>
+        
+        <div>
+            <button onclick="newColor()" class="NovaCor-pushable" role="button">
+                <span class="NovaCor-shadow"></span>
+                <span class="NovaCor-edge"></span>
+                <span class="NovaCor-text">Nova Cor
+                </span>
+            </button>
+            <button onclick="clearAll()" class="NovaCor-pushable" role="button">
+                <span class="NovaCor-shadow"></span>
+                <span class="NovaCor-edge"></span>
+                <span class="NovaCor-text">Apagar
+                </span>
+            </button>
+        </div>
+    </body >
+    <script src="./desenho.js"></script>
+</html>
+
+

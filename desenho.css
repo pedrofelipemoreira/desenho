@@ -1,0 +1,178 @@
+body{
+    background-color: #00BFFF;
+}
+
+canvas {
+    border: none;
+	background: #fff;
+	display: block;
+	margin: 50px auto 10px;
+	border-radius: 5px;
+	box-shadow: 0 4px 0 0 #222;
+	cursor:  crosshair;
+    
+}
+
+/* botoes de cor unica */
+.myDIV{
+	padding: 10px 0 20px;
+	text-align: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    
+    height: 54px;
+    width: 54px;
+    border-radius: 60px;
+    cursor: pointer;
+    border: 0;
+    box-shadow: 0 3px 0 0 #222;;
+  }
+
+.purple{
+    background-color: #AC52CC;
+}
+
+.red{
+    background-color: red;
+}
+
+.black{
+    background-color: black;
+}
+
+
+/* Mudar botão ao deixar clicado */
+.active {
+border: 7px solid #fff;
+width: 40px;
+height: 40px;
+}
+
+/* Botão de Nova Cor */
+
+.NovaCor-pushable {
+  position: relative;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline-offset: 4px;
+  transition: filter 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-left: 45%;
+  margin-top: 1%;
+  
+}
+
+.NovaCor-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  will-change: transform;
+  transform: translateY(2px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.NovaCor-edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    to left,
+    hsl(340deg 100% 16%) 0%,
+    hsl(340deg 100% 32%) 8%,
+    hsl(340deg 100% 32%) 92%,
+    hsl(340deg 100% 16%) 100%
+  );
+}
+
+.NovaCor-text {
+  display: block;
+  position: relative;
+  padding: 12px 27px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: white;
+  background-image: linear-gradient(144deg, #ff8554 0, #ff7451 16.67%, #ff604c 33.33%, #f94646 50%, #ed2441 66.67%, #e2003f 83.33%, #da0041 100%);
+  will-change: transform;
+  transform: translateY(-4px);
+  transition:
+    transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+@media (min-width: 768px) {
+  .NovaCor-text {
+    font-size: 1.25rem;
+  }
+}
+
+.NovaCor-pushable:hover {
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
+}
+
+.NovaCor-pushable:hover .NovaCor-text {
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.NovaCor-pushable:active .NovaCor-text{
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.NovaCor-pushable:hover .NovaCor-shadow {
+  transform: translateY(4px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.NovaCor-pushable:active .NovaCor-shadow {
+  transform: translateY(1px);
+  transition: transform 34ms;
+}
+
+/* personalizando input color */
+input[type="color"] {
+     width: 54px;
+     height: 54px;
+     border: 0;
+     border-radius: 50%;
+     padding: 0;
+     overflow: hidden;
+     box-shadow: 0 3px 0 0 #222;;
+     cursor: pointer;
+ }
+ input[type="color"]::-webkit-color-swatch-wrapper {
+     padding: 0;
+ }
+ input[type="color"]::-webkit-color-swatch {
+     border: none;
+ }
+
+input[type="color"]:active{
+    border: 7px solid #fff;
+    width: 40px;
+    height: 40px;
+ }

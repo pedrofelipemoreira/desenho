@@ -153,26 +153,7 @@ height: 40px;
   transition: transform 34ms;
 }
 
-/* personalizando input color */
-input[type="color"] {
-     width: 54px;
-     height: 54px;
-     border: 0;
-     border-radius: 50%;
-     padding: 0;
-     overflow: hidden;
-     box-shadow: 0 3px 0 0 #222;;
-     cursor: pointer;
- }
- input[type="color"]::-webkit-color-swatch-wrapper {
-     padding: 0;
- }
- input[type="color"]::-webkit-color-swatch {
-     border: none;
- }
 
-input[type="color"]:active{
-    border: 7px solid #fff;
-    width: 40px;
-    height: 40px;
- }
+.cores{
+  height: 50px;
+}

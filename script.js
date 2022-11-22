@@ -1,12 +1,26 @@
-let posX = 300
-let posY = 200
-let velocidade = 3
+let posX = 300;
+let posY = 200;
+let velocidade = 3;
 var cor = 'black' ;
-var cor2 = '#FFFFFF'
+var cor2 = '#FFFFFF';
+let cores;
 
-var c = document.getElementById("myCanvas");
+//Salvar imagem
+saveImg = document.querySelector(".save")
+
+
+var c = document.getElementById("myCanvas")
 var ctx = c.getContext("2d");
 
+
+//Bacground branco do tamnho do canvas, para o print sair certinho
+const setCanvasBacground = () =>{
+    ctx.fillStyle = "#fff";
+    ctx.fillRect(0, 0, c.width, c.height);
+}
+
+
+setCanvasBacground ()
 
 // Escrita KidCode no fundo
 ctx.font = "50px Verdana";
@@ -27,6 +41,7 @@ function game(){
     ctx.fillRect(posX,posY,8,8);
     ctx.fillStyle = `${cor2}`
     ctx.fillRect(posX + 3, posY + 3, 2, 2);
+
 }
 // }
 
@@ -57,6 +72,7 @@ function keypush (event){
 //Botão de reset apaga todo o desenho e começa novamente
 function clearAll(){
     ctx.clearRect(0,0,600,400)
+    setCanvasBacground ()
     ctx.font = "50px Verdana";
     ctx.strokeStyle = "grey"
     ctx.strokeText("KidCode",200,200);
@@ -99,17 +115,35 @@ function black(){
     cor2 = "#ffffff"
 }
 
-//Pega o valor do input cor e manda para o pincel
-function newColor(){
-    var novaCor = document.getElementById("Cores").value
-    cor = novaCor
+//Carregador da pagina
+window.addEventListener("load", startup, false);
 
-    //Caso escolha a cor branca o ponto de referencia fica preto
-    if (novaCor == "#ffffff"){
+//Puxa o input color
+//após o evento de entrada da cor
+function startup() {
+    cores = document.querySelector("#cores");
+    cores.addEventListener("input", updateFirst, false);
+}
+
+
+//Muda a cor do ponteiro simultaneo de acordo com a acor escolhida
+function updateFirst(event) {
+    cor = event.target.value;
+    console.log(event.target.value)
+    
+    if (cor == "#ffffff"){
         cor2 = "#000000"
     }else{
         cor2 = "#ffffff"
     }
+
 }
 
 
+//Download da imagem
+saveImg.addEventListener("click", () => {
+    const link = document.createElement("a");
+    link.download = `Seu Desenho KID CODE.jpg`;
+    link.href = c.toDataURL();
+    link.click()
+});

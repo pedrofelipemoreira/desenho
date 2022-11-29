@@ -84,6 +84,7 @@ height: 40px;
     cubic-bezier(.3, .7, .4, 1);
 }
 
+
 .NovaCor-edge {
   position: absolute;
   top: 0;
@@ -156,4 +157,9 @@ height: 40px;
 
 .cores{
   height: 50px;
+  cursor: pointer;
+}
+
+.botao{
+  height: 150px;
 }

@@ -4,6 +4,17 @@ let velocidade = 3;
 var cor = 'black' ;
 var cor2 = '#FFFFFF';
 let cores;
+let bbb;
+var tamanho = 8;
+
+var fundo = new Image();
+fundo.src = 'kidscode.png';
+
+var carro = new Image();
+carro.src = 'carro.png';
+
+var casa = new Image();
+casa.src = 'casa.png';
 
 //Salvar imagem
 saveImg = document.querySelector(".save")
@@ -20,12 +31,14 @@ const setCanvasBacground = () =>{
 }
 
 
-setCanvasBacground ()
+setCanvasBacground ();
+
+ctx.drawImage(fundo,0,0,600,400);
 
 // Escrita KidCode no fundo
-ctx.font = "50px Verdana";
+/* ctx.font = "50px Verdana";
 ctx.strokeStyle = "grey"
-ctx.strokeText("KidCode",200,200);
+ctx.strokeText("KidCode",200,200); */
 
 
 //funcionamento do pincel de desenho {
@@ -38,7 +51,7 @@ function game(){
     /* ctx.clearRect(posX, posY, 4, 6); */
 
     ctx.fillStyle = `${cor}`
-    ctx.fillRect(posX,posY,8,8);
+    ctx.fillRect(posX,posY,tamanho,tamanho);
     ctx.fillStyle = `${cor2}`
     ctx.fillRect(posX + 3, posY + 3, 2, 2);
 
@@ -73,9 +86,7 @@ function keypush (event){
 function clearAll(){
     ctx.clearRect(0,0,600,400)
     setCanvasBacground ()
-    ctx.font = "50px Verdana";
-    ctx.strokeStyle = "grey"
-    ctx.strokeText("KidCode",200,200);
+    ctx.drawImage(fundo,0,0,600,400)
     posX = 300
     posY = 200
 }
@@ -97,6 +108,9 @@ function selecionar(){
 // }
 
 
+
+
+
 //muda a cor para lilais
 function purple(){
     cor = '#AC52CC'
@@ -115,6 +129,15 @@ function black(){
     cor2 = "#ffffff"
 }
 
+function white(){
+
+    cor = "#ffffff"
+    cor2 = "black"
+
+}
+
+
+
 //Carregador da pagina
 window.addEventListener("load", startup, false);
 
@@ -123,6 +146,17 @@ window.addEventListener("load", startup, false);
 function startup() {
     cores = document.querySelector("#cores");
     cores.addEventListener("input", updateFirst, false);
+    bbb = document.querySelector("#maa");
+    bbb.addEventListener("input", updateSecond, false);
+}
+
+
+//Mudar tamanho do brush, simultaneo
+function updateSecond(event){
+    console.log(event.target.value)
+
+    tamanho = event.target.value;
+    console.log(tamanho)
 }
 
 
@@ -147,3 +181,31 @@ saveImg.addEventListener("click", () => {
     link.href = c.toDataURL();
     link.click()
 });
+
+function desenho1(){
+    ctx.clearRect(0,0,600,400)
+    ctx.drawImage(fundo,0,0,600,400)
+
+    posX = 300
+    posY = 200
+}
+
+function desenho2(){
+    ctx.clearRect(0,0,600,400)
+    ctx.drawImage(carro,0,0,600,400)
+
+    posX = 300
+    posY = 200
+}
+
+
+
+function desenho3(){
+    ctx.clearRect(0,0,600,400)
+    ctx.drawImage(casa,0,0,600,400)
+
+    posX = 300
+    posY = 200
+}
+
+

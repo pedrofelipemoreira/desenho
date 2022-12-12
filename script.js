@@ -177,7 +177,7 @@ function updateFirst(event) {
 //Download da imagem
 saveImg.addEventListener("click", () => {
     const link = document.createElement("a");
-    link.download = `Seu Desenho KID CODE.jpg`;
+    link.download = `Kid's Code.jpg`;
     link.href = c.toDataURL();
     link.click()
 });

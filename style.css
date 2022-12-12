@@ -3,7 +3,7 @@ body{
 }
 
 canvas {
-    border: none;
+  border: none;
 	background: #fff;
 	display: block;
 	margin: 50px auto 10px;
@@ -17,7 +17,7 @@ canvas {
 .myDIV{
 	padding: 10px 0 20px;
 	text-align: center;
-    flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -156,11 +156,67 @@ height: 40px;
 
 
 .cores{
+  border: none;
+  border-radius: 10px;
   height: 50px;
   cursor: pointer;
 }
 
 .botao{
-  height: 150px;
+  height: 130px;
 }
 
+#imagens{
+
+}
+
+.container{
+  display: flex;  
+  justify-content: center;
+  padding-left: 15%;
+}
+
+.img{
+  width: 210px;
+  padding: 0px 22px 0;
+  overflow: auto;
+  height: 400px;
+  margin-top: 50px;
+}
+
+.img button{
+  margin-bottom:10px ;
+}
+
+.maisDesenho{
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+}
+
+
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.maisDesenho i:hover{
+  transform: rotate(80deg);
+  -webkit-transform: rotate(80deg);
+}
+
+.save{
+  border: none;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  background-image: linear-gradient(144deg, #ff8554 0, #ff7451 16.67%, #ff604c 33.33%, #f94646 50%, #ed2441 66.67%, #e2003f 83.33%, #da0041 100%);
+}

@@ -209,3 +209,12 @@ function desenho3(){
 }
 
 
+function abrirImagens(){
+    var x = document.getElementById("imagens");
+
+    if (x.style.display == "none"){
+        x.style.display = "block";
+    }else {
+        x.style.display = "none"
+    }
+}

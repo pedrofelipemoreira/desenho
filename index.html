@@ -9,16 +9,31 @@
         
     </head>
     <body>
-                
-                <input type="image" class="botao kidcode" src="./kidscode.png" onclick="desenho1()">
-                <input type="image" class="botao carro" src="./carro.png" onclick="desenho2()">
-                <input type="image" class="botao casa" src="./casa.png" onclick="desenho3()">
-                
-           
-        <canvas id="myCanvas" width="600" height="400" style="border:2px solid #d3d3d3;">
-            Your browser does not support the HTML canvas tag.</canvas>
+        <div class="container">
+            <section class="lousa">
+                <canvas id="myCanvas" width="600" height="400" style="border:2px solid #d3d3d3;">
+                    Your browser does not support the HTML canvas tag.</canvas>
+            </section>
+            
+            
+            <asside class="img">
+                <button class="maisDesenho" onclick="abrirImagens()">Mais Desenhos <i class="arrow down"></i></button>
+                <div id="imagens">
+                    <input type="image" class="botao kidcode" src="./kidscode.png" onclick="desenho1()">
 
-        
+                    <input type="image" class="botao carro" src="./carro.png" onclick="desenho2()">
+
+                    <input type="image" class="botao casa" src="./casa.png" onclick="desenho3()">
+
+                    <input type="image" class="botao kidcode" src="./kidscode.png" onclick="desenho1()">
+
+                    <input type="image" class="botao carro" src="./carro.png" onclick="desenho2()">
+
+                    <input type="image" class="botao casa" src="./casa.png" onclick="desenho3()">
+                    
+                </div> 
+            </asside>
+        </div>
         <div class="myDIV" id="myDIV">
             <button class="btn black active" onclick="black()"></button>
             <button class="btn white" onclick="white()"></button>
@@ -36,9 +51,8 @@
                 </span>
             </button>
             <button class="save">Salvar Desenho</button>
-            <input type="range" id="maa" min="8" max="15">
+            <!-- <input type="range" id="maa" min="8" max="15"> -->
 
-            
         </div>
     </body >
     <script src="./script.js"></script>

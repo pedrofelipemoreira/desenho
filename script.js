@@ -8,13 +8,13 @@ let bbb;
 var tamanho = 8;
 
 var fundo = new Image();
-fundo.src = 'kidscode.png';
+fundo.src = './images/kidscode.png';
 
 var carro = new Image();
-carro.src = 'carro.png';
+carro.src = './images/carro.png';
 
 var casa = new Image();
-casa.src = 'casa.png';
+casa.src = './images/casa.png';
 
 //Salvar imagem
 saveImg = document.querySelector(".save")
